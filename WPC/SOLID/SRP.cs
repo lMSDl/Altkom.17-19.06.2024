@@ -1,7 +1,5 @@
-﻿namespace WPC.SOLID
+﻿namespace WPC.SOLID.SRP
 {
-    internal class SRP
-    {
         public class User
         {
             public string UserName { get; set; }
@@ -44,5 +42,4 @@
         }
     }
 }*/
-    }
 }

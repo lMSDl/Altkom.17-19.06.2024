@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WPC.SOLID
+namespace WPC.SOLID.OCP
 {
-    internal class OCP
-    {
         abstract class Shape
         {
             public abstract double GetArea();
@@ -49,7 +47,7 @@ namespace WPC.SOLID
             double Area(Shape shape)
             {
                 return shape.GetArea();
-               /* switch (shape)
+                /*switch (shape)
                 {
                     case Square square:
                         return square.A * square.A;
@@ -62,5 +60,4 @@ namespace WPC.SOLID
                 }*/
             }
         }
-    }
 }
