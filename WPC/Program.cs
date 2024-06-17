@@ -1,11 +1,12 @@
 ﻿using WPC.DesignPrinciples;
 
-var service = new PaymentService();
+var customerService = new CustomerService();
+var paymentService = new PaymentService();
 
 var customerId = 1;
-
-service.Fund(customerId, 500);
-if (service.Charge(customerId, 100))
-    Console.WriteLine($"Customer {customerId} charged. Actual balance: {service.GetBalance(customerId)}");
+var customer = customerService.FindById(customerId);
+paymentService.Fund(customer, 500);
+if (paymentService.Charge(customer, 100))
+    Console.WriteLine($"Customer {customerId} charged. Actual balance: {customer.PaymentAccount.Balance}");
 else
-    Console.WriteLine($"Not enought founds on customer {customerId} acconut! Actual balance: {service.GetBalance(customerId)}");
+    Console.WriteLine($"Not enought founds on customer {customerId} acconut! Actual balance: {customer.PaymentAccount.Balance}");
