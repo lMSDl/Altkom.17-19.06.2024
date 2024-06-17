@@ -11,16 +11,16 @@ namespace WPC.DesignPrinciples
             var account = FindById(id);
             return account?.Charge(amount) ?? false;
         }
-        public void Fund(int id, float amount)
-        {
-            var account = FindById(id);
-            account?.Fund(amount);
-        }
 
         private PaymentAccount? FindById(int id)
         {
             return PaymentAccounts.Where(x => !x.IsDeleted).SingleOrDefault(x => x.Id == id);
         }
 
+        public void Fund(int id, float amount)
+        {
+            var account = FindById(id);
+            account?.Fund(amount);
+        }
     }
 }

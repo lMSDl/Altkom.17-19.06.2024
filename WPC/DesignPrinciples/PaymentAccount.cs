@@ -10,8 +10,8 @@ namespace WPC.DesignPrinciples
 
         public int Id { get; }
         public string CustomerName { get; set; }
-        public float Income { get; set; }
-        public float Outcome { get; set; }
+        public float Income { get; private set; }
+        public float Outcome { get; private set; }
         public float AllowedDebit { get; set; }
         public bool IsDeleted { get; }
 
@@ -26,7 +26,7 @@ namespace WPC.DesignPrinciples
 
         public void Fund(float amount)
         {
-            account.Income += amount;
+            Income += amount;
         }
 
 
