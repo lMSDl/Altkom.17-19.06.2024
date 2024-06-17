@@ -13,6 +13,7 @@ namespace WPC.DesignPrinciples
         public float Income { get; set; }
         public float Outcome { get; set; }
         public float AllowedDebit { get; set; }
+        public bool IsDeleted { get; }
 
         public bool IsDebit()
         {

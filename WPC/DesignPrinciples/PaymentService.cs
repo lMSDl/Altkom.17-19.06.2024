@@ -18,20 +18,25 @@ namespace WPC.DesignPrinciples
 
         public bool Charge(int id, float amount)
         {
-            var account = PaymentAccounts.SingleOrDefault(x => x.Id == id);
+            var account = FindById(id);
             if (account == null)
                 return false;
 
-            if (account.Income - account.Outcome + account.AllowedDebit < amount)
+            if (GetBalance(id) + account.AllowedDebit < amount)
                 return false;
 
             account.Outcome += amount;
             return true;
         }
 
+        private PaymentAccount? FindById(int id)
+        {
+            return PaymentAccounts.Where(x => !x.IsDeleted).SingleOrDefault(x => x.Id == id);
+        }
+
         public void Fund(int id, float amount)
         {
-            var account = PaymentAccounts.Where(x => x.Id == id).SingleOrDefault();
+            var account = FindById(id);
             if (account == null)
                 return;
             account.Income += amount;
@@ -39,7 +44,7 @@ namespace WPC.DesignPrinciples
 
         public float? GetBalance(int id)
         {
-            var account = PaymentAccounts.Where(x => x.Id == id).SingleOrDefault();
+            var account = FindById(id);
             return account?.Income - account?.Outcome;
         }
     }
