@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Structural.Adapter.I;
+﻿using WPC.DesignPatterns.Structural.Bridge;
 using WPC.DesignPrinciples;
 
 
