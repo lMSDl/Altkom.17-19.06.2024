@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPC.DesignPatterns.Creational.Builder
 {
-    internal class Vehicle
+    internal class Vehicle : ICloneable
     {
         /*private Vehicle()
         {
@@ -53,6 +53,11 @@ namespace WPC.DesignPatterns.Creational.Builder
         public int Doors { get; set; }
         public int? TrunkCapacity { get; set; }
         public int? EnginePower { get; set; }
+
+        public object Clone()
+        {
+            return MemberwiseClone();
+        }
 
         public override string ToString()
         {

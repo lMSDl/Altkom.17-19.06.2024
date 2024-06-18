@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Creational.AbstractFactory;
+﻿using WPC.DesignPatterns.Creational.Builder;
 using WPC.DesignPrinciples;
 
 using WPC.SOLID.LSP_2;
