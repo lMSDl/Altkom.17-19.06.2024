@@ -1,7 +1,6 @@
-﻿using WPC.DesignPatterns.Creational.ObjectPool;
+﻿using WPC.DesignPatterns.Structural.Adapter.I;
 using WPC.DesignPrinciples;
 
-using WPC.SOLID.LSP_2;
 
 
 
@@ -40,8 +39,8 @@ static void SOLID_LSP()
     Console.WriteLine($"{a} * {b} = {rectangle.Area}");
 
 
-    Rectangle CreateRectangle(int a, int b)
+    WPC.SOLID.LSP_2.Rectangle CreateRectangle(int a, int b)
     {
-        return new Square { A = a, B = b };
+        return new WPC.SOLID.LSP_2.Square { A = a, B = b };
     }
 }
