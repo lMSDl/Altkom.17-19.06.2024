@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Structural.Facade.I;
+﻿using WPC.DesignPatterns.Structural.Flyweight;
 using WPC.DesignPrinciples;
 
 
