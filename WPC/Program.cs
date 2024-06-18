@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Structural.Proxy;
+﻿using WPC.DesignPatterns.Behavioral.ChainOfResponsibility.II;
 using WPC.DesignPrinciples;
 
 
