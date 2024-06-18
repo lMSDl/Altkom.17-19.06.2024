@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace WPC.DesignPatterns.Creational.Builder
 {
-    internal class VehicleBuilder
+    internal class VehicleBuilder : VehicleBuilderFacade
     {
-        private Vehicle Vehicle { get; } = new Vehicle();
+        public VehicleBuilder()
+        {
+        }
+
+        public VehicleBuilder(Vehicle vehicle) : base(vehicle)
+        {
+        }
 
         public VehicleBuilder SetWeels(int wheels)
         {
@@ -34,11 +40,6 @@ namespace WPC.DesignPatterns.Creational.Builder
         {
             Vehicle.TrunkCapacity = capacity;
             return this;
-        }
-
-        public Vehicle Build()
-        {
-            return (Vehicle)Vehicle.Clone();
         }
     }
 }

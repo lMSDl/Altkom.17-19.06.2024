@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Structural.Decorator;
+﻿using WPC.DesignPatterns.Structural.Facade.I;
 using WPC.DesignPrinciples;
 
 
