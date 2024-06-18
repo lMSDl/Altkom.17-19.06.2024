@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Structural.Flyweight;
+﻿using WPC.DesignPatterns.Structural.Proxy;
 using WPC.DesignPrinciples;
 
 
