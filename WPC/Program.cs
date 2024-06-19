@@ -1,4 +1,4 @@
-﻿using WPC.DesignPatterns.Behavioral.Command;
+﻿using WPC.DesignPatterns.Behavioral.Memento;
 using WPC.DesignPrinciples;
 
 
